@@ -29,14 +29,14 @@ img {
 header h1 {
 @include fontSize(100px);
 @include headline-font;
-color: $color;
+color: $accent;
 line-height: 1.25;
 }
 
 header h2 {
-@include fontSize(200px);
+@include fontSize(50px);
 @include headline-font;
-color: $accent;
-line-height: 0;
+color: $accent-two;
+line-height: 1.25;
 }
 
