@@ -1,0 +1,68 @@
+/* 
+Globals
+	Sass variable, mixins, plugins, etc. that are used throughout the entore site.
+*/
+@function calculateRem($size) {
+$remSize: $size / 16px;
+@return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+font-size: $size;
+font-size: calculateRem($size);
+}
+
+
+// Site variable
+$color: #454545;
+$background-color: #f6efee;
+$accent: #265557;
+$accent-two: #408f92;
+$size: 16px;
+$bigsize: 32px;
+
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xM6Eyu0BCqAfob_z3hhzRFzr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(http://fonts.gstatic.com/s/quicksand/v5/sKd0EMYPAh5PYCRKSryvW7O3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Quicksand Bold'), local('Quicksand-Bold'), url(http://fonts.gstatic.com/s/quicksand/v5/32nyIRHyCu6iqEka_hbKsqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+
+
+@mixin headline-font {
+  font-family: 'Open Sans Condensed', Oswald;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin body-font-regular {
+  font-family: 'Quicksand', Lato;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin body-font-bold {
+  font-family: 'Quicksand', Lato;
+  font-style: normal;
+  font-weight: 700;
+}
+    
+    
+
+
